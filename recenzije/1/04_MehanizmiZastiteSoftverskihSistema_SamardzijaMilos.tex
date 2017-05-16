@@ -1,0 +1,115 @@
+
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass[a4paper]{article}
+
+\usepackage[T2A]{fontenc} % enable Cyrillic fonts
+\usepackage[utf8x,utf8]{inputenc} % make weird characters work
+\usepackage[serbian]{babel}
+%\usepackage[english,serbianc]{babel}
+\usepackage{amssymb}
+
+\usepackage{color}
+\usepackage{url}
+\usepackage[unicode]{hyperref}
+\hypersetup{colorlinks,citecolor=green,filecolor=green,linkcolor=blue,urlcolor=blue}
+
+\newcommand{\odgovor}[1]{\textcolor{blue}{#1}}
+
+\begin{document}
+
+\title{Propusti u bezbednosti softvera i prevencija njihove zloupotrebe\\ \small{Aleksandra, David, Sreten}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\author{Recenzija: Miloš Samardžija}
+%ime autora recenzije neće biti predato autorima seminarskog rada
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\maketitle
+
+%Recenziju predajete u tex obliku, budite uredni!
+%Pod komentarima su data objašnjenja za svaku navedenu stavku.
+
+%!!!ne brisite narednu liniju!!!
+%pocetak teksta koji se predaje recenzentima
+
+
+\section{O čemu rad govori?}
+% Напишете један кратак пасус у којим ћете својим речима препричати суштину рада (и тиме показати да сте рад пажљиво прочитали и разумели). Обим од 200 до 400 карактера.
+Rad pruža osnovne informacije iz oblasti bezbednosti softvera. Na razumljiv način je opisana razlika između pojmova koji se često mešaju - identifikacija, autentikacija i autorizacija. Opisani su sigurnosni rizici Veb aplikacija uopšte, kao i neki od najčešćih napada, uz navedene primere. Date su osnovne preporuke za održavanje Veb servera, u cilju očuvanja bezbednosti samog servera, kao i aplikacija koje se nalaze na njemu.
+
+\section{Krupne primedbe i sugestije}
+% Напишете своја запажања и конструктивне идеје шта у раду недостаје и шта би требало да се промени-измени-дода-одузме да би рад био квалитетнији.
+\begin{enumerate}
+	\item Potrebno je preformulisati problem kod umetanja SQL upita. Nije dovoljno reći da sistem ne zna kako da rukuje sa podacima. Navesti šta je stvarni problem (nedovoljna validacija korisničkog unosa, itd.). Objasniti uopšteno koji delovi aplikacije su najranjiviji (deo za Log In se možda najčešće koristi kao početna tačka za upad, ali svakako nije jedina, ranjiv je svaki deo u kojem postoji izvršavanje upita u kojem učestvuje korisnički unos, poput pretrage na sajtu, itd.).
+	\item Primer 2.1: Jedna od najpovoljnijih situacija je ukoliko program nasilno prekine sa radom. Napadač ovaj propust može iskoristiti za mnogo opasnije stvari, kao što su zaobilaženje raznih bezbedonosnih mehanizama, izmenu podataka, i za izvršavanje proizvoljnog zlonamernog koda. 
+\end{enumerate}
+\section{Sitne primedbe}
+% Напишете своја запажања на тему штампарских-стилских-језичких грешки
+Delovi koji sadrže grešku su podebljani.
+\begin{enumerate}
+	\item Sažetak, prva rečenica (ispraviti naznačenu reč): \textit{Ovaj rad pruža osnovne informacije o bezbednosti softvera, posledicama koje nastaju usled njenog zanemarivanja i načinima \textbf{prevenecije} njenih zloupotreba.}
+	\item Bezbednost softvera, drugi pasus (predložena izmena dela prve rečenice): \textit{Dok softver koji se razvija skoro uvek ima greške u implementaciji...}
+	\item Bezbednost veb aplikacija, prvi pasus: Nakon dela gde piše ``pružanja različitih informacija`` staviti zarez.
+	\item Umesto termina ``zlonamerni programer``, koristiti termin ``zlonamerni korisnik``. Napadač ne mora biti programer, čak šta više, ne mora biti ni stručan (pogledati termin script kiddie).
+	\item Umesto termina ``injektovani``, poželjnije je koristiti termin ``umetnuti``.
+	\item Sačuvani XSS, prvi pasus: ``Stored XSS`` navesti kao ``sačuvani XSS``, i u zagradi staviti od koje engleske reči termin potiče.
+	\item Uklanjanje nepotrebnih servisa, druga rečenica: \textit{Na taj način se povećava broj slabih tačaka servera, te \textbf{je ga je} teže održavati.}
+	\item Udaljeni pristup, druga rečenica: Pre ``te je`` staviti zarez.
+\end{enumerate}
+
+\section{Provera sadržajnosti i forme seminarskog rada}
+% Oдговорите на следећа питања --- уз сваки одговор дати и образложење
+
+\begin{enumerate}
+\item Da li rad dobro odgovara na zadatu temu?\\
+	Rad dobro odgovara na zadatu temu. Obuhvata sva pitanja predviđena ovom temom.
+\item Da li je nešto važno propušteno?\\
+	Nakon detaljne analize, smatram da rad nema važnijih propusta.
+\item Da li ima suštinskih grešaka i propusta?\\
+	Rad sadrži sitne greške nastale prilikom kucanja, i određene delove je potrebno prepraviti/dopuniti.
+\item Da li je naslov rada dobro izabran?\\
+	Naslov rada je u skladu sa samim sadržajem.
+\item Da li sažetak sadrži prave podatke o radu?\\
+	Sažetak u kratkim crtama obuhvata sadržaj rada, i sadrži prave podatke.
+\item Da li je rad lak-težak za čitanje?\\
+	Rad je lak za čitanje i sadrži ilustrativne primere.
+\item Da li je za razumevanje teksta potrebno predznanje i u kolikoj meri?\\
+	Potrebno je poznavanje HTML-a, SQL-a i HTTP protokola na osnovnom nivou.
+\item Da li je u radu navedena odgovarajuća literatura?\\
+	U radu je navedena odgovarajuća literatura i citirana je u okviru rada.
+\item Da li su u radu reference korektno navedene?\\
+	Reference su korektno navedene.
+\item Da li je struktura rada adekvatna?\\
+	Struktura rada je adekvatna. Sadrži naziv teme, autore, apstrakt, uvod, razradu i zaključak.
+\item Da li rad sadrži sve elemente propisane uslovom seminarskog rada (slike, tabele, broj strana...)?\\
+	Rad sadrži slike/tabele, ograničenja za literaturu i broj strana su zadovoljena.
+\item Da li su slike i tabele funkcionalne i adekvatne?\\
+	Slike i tabele su funkcionalne, i referisane su u tekstu.
+\end{enumerate}
+
+\section{Ocenite sebe}
+% Napišite koliko ste upućeni u oblast koju recenzirate: 
+% a) ekspert u datoj oblasti
+% b) veoma upućeni u oblast
+% c) srednje upućeni
+% d) malo upućeni 
+% e) skoro neupućeni
+% f) potpuno neupućeni
+% Obrazložite svoju odluku
+Veoma sam upućen u oblast koju recenziram. Obrađivao sam sličnu temu. Takođe, sa navedenim temama, konceptima i pojmovima sam bio u kontaktu i ranije.
+
+%kraj teksta koji se predaje recenzentima
+%!!!ne brisite prethodnu liniju!!!
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Poverljivi komentari}
+% Poverljivi komentari neće biti prosleđeni autorima seminarskog rada.
+% Ukoliko nemate poverljivih komentara, ovaj deo može da ostane prazan.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\end{document}
+
+

@@ -1,0 +1,321 @@
+
+
+ % !TEX encoding = UTF-8 Unicode
+
+\documentclass[a4paper]{report}
+
+\usepackage[T2A]{fontenc} % enable Cyrillic fonts
+\usepackage[utf8x,utf8]{inputenc} % make weird characters work
+\usepackage[serbian]{babel}
+%\usepackage[english,serbianc]{babel}
+\usepackage{amssymb}
+
+\usepackage{color}
+\usepackage{url}
+\usepackage[unicode]{hyperref}
+\hypersetup{colorlinks,citecolor=green,filecolor=green,linkcolor=blue,urlcolor=blue}
+
+\newcommand{\odgovor}[1]{\textcolor{blue}{#1}}
+\newcommand{\say}[1]{\textit{#1}}
+
+\begin{document}
+
+\title{Napadi na softverske sisteme i mehanizmi zaštite \small{\author{Čedomir Dimić, Jana Milutinović, Miloš Samardžija}}}
+
+\maketitle
+
+\tableofcontents
+
+
+\chapter{Recenzent \odgovor{--- ocena:3} }
+
+
+\section{O čemu rad govori?}
+% Напишете један кратак пасус у којим ћете својим речима препричати суштину рада (и тиме показати да сте рад пажљиво прочитали и разумели). Обим од 200 до 400 карактера.
+Rad govori o napadima na softverske sisteme, i predlaže načine za njihovo sprečavanje. Navedeni su primeri najčešćih vrsta napada, kao i bezbednosni propusti u sistemima. Dobija se dobra slika o ranjivosti softvera i značaja dobrog dizanja.
+
+\section{Krupne primedbe i sugestije}
+% Напишете своја запажања и конструктивне идеје шта у раду недостаје и шта би требало да се промени-измени-дода-одузме да би рад био квалитетнији.
+Neke rečenice su preduge i zbunjujuće. Umesto nabrajanja bi možda bilo bolje odabrati manje primera, ali im posvetiti više pažnje.\\
+\odgovor{Nisu navedene konkretne rečenice koje su recenzentu bile zbunjujuće. Potrudili smo se da tekst bude prilagođen neupućenom čitaocu. } 
+
+\section{Sitne primedbe}
+% Напишете своја запажања на тему штампарских-стилских-језичких грешки
+Odeljak 2.2 Antivirusni softver - "...postoje novi virusi koje antivirus nema registrovan u svojoj...". Trebalo bi da piše "...nema registrovane...". Odeljak 2.4 Virtuelna privatna mreža - "Takođe postoji autentikacija pošiljaoca da bi se onemogućilo neovlašćenim korisnicima pristup mreži". Redosled reči u ovoj rečenici nema smisla. Odeljak 5. Bezbednosni propusti pri implementaciji veb servera - Na par mesta u tekstu se našlo I umesto i. Takođe, trebalo bi upotrebljavati sinonime, umesto ponavljanja jedne reči u uzastopnim rečenicama.\\
+\odgovor{Primedbe su prihvaćene i greške su ispravljene.}
+\section{Provera sadržajnosti i forme seminarskog rada}
+% Oдговорите на следећа питања --- уз сваки одговор дати и образложење
+
+\begin{enumerate}
+\item Da li rad dobro odgovara na zadatu temu?\\
+Rad sasvim dobro pokriva napade koji se mogu izvršiti na neki softverski sistem. Posebno je dobro što postoje primeri za vrste napada koji su prikazani.
+\item Da li je nešto važno propušteno?\\
+Uzimajući u obzir moje znanje o ovoj temi, nije.
+\item Da li ima suštinskih grešaka i propusta?\\
+Nema.
+\item Da li je naslov rada dobro izabran?\\
+Naslov rada dobro reflektuje sadržaj koji sledi u radu.
+\item Da li sažetak sadrži prave podatke o radu?\\
+Sažetak ima sve bitne podatke o radu, kao i dobar uvod za temu koju rad obrađuje.
+\item Da li je rad lak-težak za čitanje?\\
+Rad je malo teži za čitanje zbog nekih nepotrebno dugih rečenica i čudnih konstrukcija. Sa tehničke strane je jasan i čitljiv.\\
+\odgovor{Ovaj komentar je kontradiktoran.}
+\item Da li je za razumevanje teksta potrebno predznanje i u kolikoj meri?\\
+Potrebno je znati osnove veb tehnologija.
+\item Da li je u radu navedena odgovarajuća literatura?\\
+Jeste.
+\item Da li su u radu reference korektno navedene?\\
+Jesu.
+\item Da li je struktura rada adekvatna?\\
+Ispoštovani su uslovi za izradu seminarskog rada, sem par sitnih propusta. Na primer, nije mi se učitala slika steka na strani 5 i stavka sa brojem 4 se nalazi na strani 11, umesto na strani 10 izmedju stavki 3 i 5.\\
+\odgovor{Ove greške su ispravljene.}
+\item Da li rad sadrži sve elemente propisane uslovom seminarskog rada (slike, tabele, broj strana...)?\\
+Da.
+\item Da li su slike i tabele funkcionalne i adekvatne?\\
+Jesu, osim one slike steka, već navedene.\\
+\odgovor{Umesto slike steka, ubačena je tabela.}
+\end{enumerate}
+
+\section{Ocenite sebe}
+% Napišite koliko ste upućeni u oblast koju recenzirate: 
+% a) ekspert u datoj oblasti
+% b) veoma upućeni u oblast
+% c) srednje upućeni
+% d) malo upućeni 
+% e) skoro neupućeni
+% f) potpuno neupućeni
+% Obrazložite svoju odluku
+Ocenio bih sebe kao srednje upućenog u ovu oblast. Nisam se previše bavio ovom temom u slobodno vreme, ali sam polagao kurs Informacioni sistemi, na kome je u nekoj meri bila obrađena ova oblast.
+
+
+\chapter{Recenzent \odgovor{--- ocena:5} }
+
+
+\section{O čemu rad govori?}
+Rad prestavlja osnovne koncepte bezbednosti softvera kroz primere napada i savete kako se zaštiti od njih. Premda je ta sfera bezbednosti široka i konstanto se razvija, autori rada su uspeli da izdvoje najvažnije teme i da pruže svest o tome koliko se neki napadi mogu lako izvesti, a koliko opasnosti donose.
+
+\section{Krupne primedbe i sugestije}\label{primedba}
+Krupna primedba je što su prevencije nekih napada površno objašnjeni (primeri: XSS, CSRF), bez ulaženja u detalje, koji su možda i najbitniji za tu tematiku (naš cilj je da sprečimo da se napad desi, bez adekvatnog objašnjenja je to teško).\\
+\odgovor{Prevencija navedenih napada je detaljnije opisana.}
+
+\section{Sitne primedbe}
+Sitna primedba je \say {Listing 2: Primer ranjivog upita}. Konkretno \say {Listing} nije relevantno navoditi uz ime primera. \\Medju sitnijim primedbama je i ta što je veznik \say{i} veliko slovo u pojedinim delovima u tekstu između reči.\\
+\odgovor{Primedbe su prihvaćene i ispravljene su greške.}
+
+\section{Provera sadržajnosti i forme seminarskog rada}
+
+\begin{enumerate}
+\item Da li rad dobro odgovara na zadatu temu?\\
+Rad dobro odgovara na pitanja o bezbednosti softvera i njegove zaštite.
+\item Da li je nešto važno propušteno?\\
+Ništa suštinski nije propušteno, ono što je rečeno u uvodnim delovima i ono što se očekivalo od rada, zaista je detaljno i objašnjeno.
+\item Da li ima suštinskih grešaka i propusta?\\
+Jedini propust su detalji prevencije napada, kao što je objašnjeno u sekciji \ref{primedba}
+\item Da li je naslov rada dobro izabran?\\
+Sam naslov bi mogao da bude adektvatniji, jer se rad dobrim delom posvetio i prevencijama napada.\\
+\odgovor{Koristili smo radni naslov koji je sada ispravljen tako da bolje odgovora sadržaju rada.}
+\item Da li sažetak sadrži prave podatke o radu?\\
+Konkretno, tema sažetka je slična uvodnom delu, što se može smatrati propustom (izuzetak je poslednja rečenica sažetka). U toj sekciji se očekivalo više o cilju rada i kroz koje teme rad prolazi.\\
+\odgovor{U potpunosti se slažemo sa ovom primedbom i izmenili smo sadržaj sažetka i uvoda tako da nema ponavljanja.}
+\item Da li je rad lak-težak za čitanje?\\
+Rad je lako čitljiv.
+\item Da li je za razumevanje teksta potrebno predznanje i u kolikoj meri?\\
+Predznanje nije potrebno u velikoj meri, jer su se autori posvetili detaljnim objašnjenima većine rada.
+\item Da li je u radu navedena odgovarajuća literatura?\\
+Literatura odgovara temama na koje se fokusira sam rad.
+\item Da li su u radu reference korektno navedene?\\
+Sve činjenice su potkrepljene odgovarajućom literaturom.
+\item Da li je struktura rada adekvatna?\\
+Za strutukturni deo rada postoji primedba za sekciju \say{5.2 Propusti i načini otklanjanja}, konkretno za nabrajanje koje je ispreturano (pojedini delovi samo izlistani bez objašnjenja).\\
+\odgovor{ Tekst u poglavlju \say{5.2} je dorađen i sada su neke najvažnije stavke objašnjene a one za koje nije bilo mesta u ovom radu adekvatno napomenute. }
+\item Da li rad sadrži sve elemente propisane uslovom seminarskog rada (slike, tabele, broj strana...)?\\
+Radu fali sumiranje celokupnog istraživanja i načini unapređivanja (konkretno, fali sekcija  \say{Zaključak})\\
+\odgovor{Zaključak je dodat i tu je sumiran celokupan sadržaj.}
+\item Da li su slike i tabele funkcionalne i adekvatne?\\
+\say{Slika 1: Stanje steka nakon izvršavanja strcpy} nije funkcionalna, već je navedena putanja do nje, što čitaocima nije od preteranog značaja.\\
+\odgovor{Umesto slike 1, ubačena je tabela.}
+\end{enumerate}
+
+\section{Ocenite sebe}
+% Napišite koliko ste upućeni u oblast koju recenzirate: 
+% a) ekspert u datoj oblasti
+% b) veoma upućeni u oblast
+% c) srednje upućeni
+% d) malo upućeni 
+% e) skoro neupućeni
+% f) potpuno neupućeni
+% Obrazložite svoju odluku
+Smatram sebe srednje upućenim u konkretnu oblast, jer sam izdvojio vreme za istraživanje teme koju su autori obradili.
+
+\chapter{Recenzent \odgovor{--- ocena:5} }
+
+
+\section{O čemu rad govori?}
+% Напишете један кратак пасус у којим ћете својим речима препричати суштину рада (и тиме показати да сте рад пажљиво прочитали и разумели). Обим од 200 до 400 карактера.
+U ovom radu su opisani napadi na softverske sisteme, kroz nedostatke u implementaciji samog softvera. Takođe su i predstavljene kraće celine govoreći o mehanizmima zaštite softvera, uobičajenim greškama u dizajnu i propustima pri implementaciji veb servera.
+
+\section{Krupne primedbe i sugestije}
+% Напишете своја запажања и конструктивне идеје шта у раду недостаје и шта би требало да се промени-измени-дода-одузме да би рад био квалитетнији.
+Uzimajući u obzir to da je tema i suština rada bila da se opišu napadi na softverske sisteme, dok sam čitala imala sam osećaj da tom poglavlju, pod naslovom Napadi, nije dat dovoljan značaj. Skratila bih neke delove, kako bi se moglo opširnije pisati o samim napadima. Još jedna stvar koja mi je zapala za oko je u poglavlju 3.1, Slika 1 čiju namenu nisam u potpunosti razumela, ili možda slika nije uspešno dodata. Nedostaje zaključak.\\
+\odgovor{Potrudili smo se da uskladimo sadržaj i naslov rada. Prevencija nekih napada je opisana malo detaljnije. Umesto slike 1, ubačena je tabela. Zaključak je dodat.}
+
+\section{Sitne primedbe}
+% Напишете своја запажања на тему штампарских-стилских-језичких грешки
+Postoji par štamparskih, sintaksnih i stilskih grešaka na koje sam naišla, koje ću navesti u nastavku:
+\begin{enumerate}
+\item Prva rečenica sažetka nije poravnata sa pasusom u kom se nalazi.\\
+\odgovor{Ispravljena je greška.}
+\item U glavi 2 pri navođenju osnovnih mehanizama zaštite na Internetu, smatram da su \textbf{zaštitni zid}, \textbf{antivirusni programi} i \textbf{šifrovanje} podataka trebali biti posebno naznačeni, na primer boldovani, kako bi se isticali od okolnog teksta i lakše uočili.\\
+\odgovor{Sugestije su prihvaćene.}
+\item U poglavlju 2.4 u 6. redu prvog pasusa piše obezbežuje umesto obezbeđuje.\\
+\odgovor{Greška je ispravljena.}
+\item U poglavlju 3.1 u primeru prekoračenja bafera, smatram da ako je primer toliki da može da stane na jednu stranu, da bude na jednoj strani, a ne da se prelama na dve, zbog čitljivosti.\\
+\odgovor{Greška je ispravljena.}
+\item Isto važi za poglavlje 3.2, primer ranjivog upita.\\
+\odgovor{Greška je ispravljena.}
+\item U poglavlju 3.5, kada se navodi podela XSS napada, smatram da je bolje navoditi tačkama, nego brojevima, sem u slučaju kada je redosled navođenja bitan.\\
+\odgovor{Sugestija je prihvaćena.}
+\item Isto važi i za glavu 4 pri navođenju propusta u dizajnu.\\
+\odgovor{Sugestija je prihvaćena.}
+\item U poglavlju 5.2, ako je već navođeno brojevima, redosled brojeva treba onda i poštovati, stavka pod rednim brojem 4. je van svog redosleda.\\
+\odgovor{Ispravljena je greška.}
+\item Na par mesta je napisano autentifikacija umesto autentikacija.\\
+\odgovor{Ispravljena je greška.}
+\end{enumerate}
+
+\section{Provera sadržajnosti i forme seminarskog rada}
+% Oдговорите на следећа питања --- уз сваки одговор дати и образложење
+
+\begin{enumerate}
+\item Da li rad dobro odgovara na zadatu temu?\\
+Da, rad odgovara dobro na tu temu.
+\item Da li je nešto važno propušteno?\\
+Svi zahtevi teme su obuhvaćeni, tako da ništa nije propušteno.
+\item Da li ima suštinskih grešaka i propusta?\\
+Ono što sam ja primetila je da naslov nije u skladu sa sadržajem rada, kao i da nedostaje zaključak.\\
+\odgovor{Promenjen je naslov rada i dodat je zaključak.}
+\item Da li je naslov rada dobro izabran?\\
+Naslov nije u skladu sa sadržajem. Ne obuhvata sve teme obrađene u radu.\\
+\odgovor{Promenjen je naslov rada.}
+\item Da li sažetak sadrži prave podatke o radu?\\
+Da, u kratkim crtama je opisano o čemu rad govori.
+\item Da li je rad lak-težak za čitanje?\\
+Rad je bio srednje-lak za čitanje, dakle formatiranje teksta nije savršeno, neke ključne stvari su trebale biti posebno istaknute (bold ili underline), kako bi se čitaocu olakšalo zapažanje tih ključnih stvari. Konstrukcija rečenica je bila dobra i lako razumljiva. Nije bilo predugačkih i zbunjujućih rečenica.
+\item Da li je za razumevanje teksta potrebno predznanje i u kolikoj meri?\\
+Za razumevanje ovog teksta je potrebno neko osnovno znanje o programiranju, Vebu, bazama podataka.
+\item Da li je u radu navedena odgovarajuća literatura?\\
+Da, navedena literatura je odgovarajuća.
+\item Da li su u radu reference korektno navedene?\\
+Reference su korektno navedene.
+\item Da li je struktura rada adekvatna?\\
+Struktura rada je adekvatna.
+\item Da li rad sadrži sve elemente propisane uslovom seminarskog rada (slike, tabele, broj strana...)?\\
+Slika 1 izgleda da nije dobro učitana i prikazana, tabela nije bilo, a broj strana je adekvatan.\\
+\odgovor{Umesto slike 1, ubačena je tabela.}
+\item Da li su slike i tabele funkcionalne i adekvatne?\\
+Slika 1 izgleda da nije dobro učitana i prikazana, ostatak je u redu.\\
+\odgovor{Umesto slike 1, ubačena je tabela.}
+
+\end{enumerate}
+
+\section{Ocenite sebe}
+% Napišite koliko ste upućeni u oblast koju recenzirate: 
+% a) ekspert u datoj oblasti
+% b) veoma upućeni u oblast
+% c) srednje upućeni
+% d) malo upućeni 
+% e) skoro neupućeni
+% f) potpuno neupućeni
+% Obrazložite svoju odluku
+Srednje sam upućena u navedenu oblast, s obzirom da sam i sama istraživala i učila o većini ovih stvari.
+
+\chapter{Recenzent \odgovor{--- ocena:5} }
+
+
+\section{O čemu rad govori?}
+% Напишете један кратак пасус у којим ћете својим речима препричати суштину рада (и тиме показати да сте рад пажљиво прочитали и разумели). Обим од 200 до 400 карактера.
+Upoznajemo se sa 3 osnovna aspekta bezbednosti, kao i sa mehanizmima zaštite koji omogućavaju da se navedeni aspekti ispoštuju. Pažnja je posvećena čestim tipovima napada na informacione sisteme, uz primere koji oslikavaju propuste i nastale probleme. Predočene su smernice za dizajn softvera koji olakšava izradu bezbednih aplikacija, kao i mogući propusti pri implementaciji veb servera.
+
+\section{Krupne primedbe i sugestije}
+% Напишете своја запажања и конструктивне идеје шта у раду недостаје и шта би требало да се промени-измени-дода-одузме да би рад био квалитетнији.
+U nastavku su primedbe i sugestije, kao i obrazloženja za njihovo navođenje u ovom odeljku.
+
+\begin{itemize}
+	\item \textbf{Neophodno je preurediti sažetak} - Cilj sažetka je da ubedi čitaoca da je rad vredan njegovog vremena, da mu da uvid u ono što ga očekuje u nastavku, a ne da mu predstavi temu. Radova na svaku temu ima mnogo, bitno je naglasiti šta je to što ovaj rad donosi specifično.\\
+	\odgovor{Preuređen je sažetak rada.}
+	\item \textbf{Nedostaje zaključak} - Bez adekvatnog zaključka, koji će spojiti sve ono što je rečeno u prethodnim sekcijama, gubi se smisao i poenta rada. Neophodno je čitaocu skrenuti pažnju na bitna zapažanja koja su posledice svega obrađenog u radu. Takođe, zaključak nam daje uvid u opravdanost obrađivanja ove teme i pokazuje stvarnu potrebu za njenim daljim izučavanjem.\\
+	\odgovor{Zaključak je dodat.}
+	\item \textbf{Uvod bez informacija o samom radu} - Umesto i sadržinom rada, uvod se bavi samo sigurnošću softvera. U početku naučnog rada, bez ikakve najave, polazi se sa gomilom novih pojmova. Bolje bi bilo dodati ukratko šta će čitaoci sve naći u narednim sekcijama, pozvati se na literaturu koja šire obrađuje temu rada, itd.\\
+	\odgovor{U sažetku su nabrojane teme kojima se ovaj rad bavi. Potrudili smo se da sve nepoznate pojmove objasnimo, ali bilo je i onih koji nismo jer smo smatrali da su dovoljno jasni čitaocima kojima je ovaj rad namenjen.}
+	\item \textbf{Loše nabrajanje u sekciji 5.2} - U ovom nabrajanju se pojavljuju dva propusta:
+	\begin{enumerate}
+		\item Neregularan redosled nabrajanja - nakon broja 3 slede brojevi 5 do 14, nakon čega se nabrajanje vraća na broj 4\\
+		\odgovor{Greške su ispravljene.}
+		\item Menjanje stila - prve 4 stavke (po rednom broju, ne po redosledu pojavljivanja) su detaljnije objašnjene propratnim tekstom, dok one nakon toga nisu; Bilo bi mnogo smislenije da se stavke koje neće biti detaljnije obrađene navedu odvojeno od nabrajanja uz napomenu zašto su manje bitne od ostalih\\
+		\odgovor{ Tekst u poglavlju \say{5.2} je dorađen i sada su neke najvažnije stavke objašnjene a one za koje nije bilo mesta u ovom radu adekvatno napomenute. }
+	\end{enumerate}
+\end{itemize}
+
+\section{Sitne primedbe}
+% Напишете своја запажања на тему штампарских-стилских-језичких грешки
+
+Kada je reč o sitnim, jezičkim greškama, neophodno je napomenuti propust pri uvođenju termina engleskog porekla \say{chat} korišćen je u tom obliku, bez ikakvog označavanja. Umesto toga, bilo bi mnogo prirodnije koristiti naš izraz \say{ćaskanje}, uz naglašavanje da se misli na gore navedeni termin.\\
+\odgovor{Sugestija je prihvaćena.}
+
+Osim toga, u tekstu postoji više stamparskih grešaka, izostavljanje i dodavanje slova. Zbog njihove brojnosti neće biti ovde navedena svaka.\\
+\odgovor{Ispravljene su štamparske greške.}
+
+\section{Provera sadržajnosti i forme seminarskog rada}
+% Oдговорите на следећа питања --- уз сваки одговор дати и образложење
+
+\begin{enumerate}
+\item Da li rad dobro odgovara na zadatu temu?\\
+{Rad uspešno odgovara na temu. Svaka sekcija predstavlja odgovor na jedno od pitanja postavljenih sa ciljem dobre analize teme.}
+\item Da li je nešto važno propušteno?\\
+{Na sva suštinska pitanja koja se tiču teme je uspešno odgovoreno.}
+\item Da li ima suštinskih grešaka i propusta?\\
+{Radu nedostaje zaključak. Celokupna priča nije zaokružena izvlačenjem ključnih tačaka koje bi naglasile čitaocu na šta posebno treba obratiti pažnju kada je reč o ovoj temi.}\\
+\odgovor{Zaključak je dodat.}
+\item Da li je naslov rada dobro izabran?\\
+{Stiče se utisak da su napadi na softverske sisteme samo sporedna stavka ovog rada i da se pažnja daleko više posvećuje dizajnu koji ih sprečava. Zbog toga ovaj naslov nije najadekvatnije rešenje.}\\
+\odgovor{Naslov rada je promenjen tako da bolje odgovora samom sadržaju rada.}
+\item Da li sažetak sadrži prave podatke o radu?\\
+{Sažetak više liči na uvod u kom se upoznajemo sa temom rada nego na stvaran sažetak sadržine. Umesto da u kratkim crtama privuče čitaoca da nastavi sa čitanjem rada, sažetak uvodi u temu (što je zadatak uvoda).}\\
+\odgovor{Sažetak je izmenjen u skladu sa ovom primedbom.}
+\item Da li je rad lak-težak za čitanje?\\
+{Rad je prilično lak za čitanje, bez nepotrebnog komplikovanja.}
+\item Da li je za razumevanje teksta potrebno predznanje i u kolikoj meri?\\
+{Za razumevanje teksta je potrebno osnovno poznavanje iz oblasti računarskih nauka. Većina bitnih stavki potrebnih za razumevanje teme je u hodu objašnjena čitaocu. Stiče se utisak da bi i mnoga nestručna lica koja računare koriste u svakodnevnom radu mogla da razumeju veći deo rada.}
+\item Da li je u radu navedena odgovarajuća literatura?\\
+{Literatura je uredno navedena. Svaka stavka pruža bolji uvid u segment priče na koji se odnosi.}
+\item Da li su u radu reference korektno navedene?\\
+{U radu su reference korektno navedene, kako na slike, tako i pozivanja na literaturu.}
+\item Da li je struktura rada adekvatna?\\
+{Struktura rada omogućava da se jasno vide odgovori na sva postavljena pitanja. Ostaje utisak da sažetak, uvod i zaključak nisu ispratili sam sadržaj svojim kvalitetom.}\\
+\odgovor{Sažetak i uvod su izmenjeni, a zaključak je dodat.}
+\item Da li rad sadrži sve elemente propisane uslovom seminarskog rada (slike, tabele, broj strana...)?\\
+{Radu nedostaje tabela. Ostali uslovi su ispunjeni.}\\
+\odgovor{Tabela je dodata.}
+\item Da li su slike i tabele funkcionalne i adekvatne?\\
+{Slika 1 nije uredno ubačena, te se u fajlu koji je meni prosleđen na recenziju umesto slike vidi putanja na kojoj bi ta slika trebala da se nalazi. Zamerka za drugu sliku je što nije preuređena tako da tekst na njoj bude na srpskom jeziku, u skladu sa ostatkom rada.}\\
+\odgovor{Umesto slike 1, ubačena je tabela 1. Smatramo da je tekst koji se nalazi na drugoj slici dovoljno jasan i da se pomenuti termini češće koriste na engleskom jeziku.}
+\end{enumerate}
+
+\section{Ocenite sebe}
+% Napišite koliko ste upućeni u oblast koju recenzirate: 
+% a) ekspert u datoj oblasti
+% b) veoma upućeni u oblast
+% c) srednje upućeni
+% d) malo upućeni 
+% e) skoro neupućeni
+% f) potpuno neupućeni
+% Obrazložite svoju odluku
+
+U temu rada sam srednje upućen. Sa pitanjima na koja rad pruža odgovore, upoznat sam toliko detaljno koliko je to obrađeno na fakultetskim kursevima. Nikada nisam bio u prilici da se detaljnije bavim bilo čime što bi imalo snažnije veze sa temom rada. U skladu sa tim, ova recenzija se više tiče forme pisanja rada nego njegovim sadržajem.
+
+\chapter{Dodatne izmene}
+%Ovde navedite ukoliko ima izmena koje ste uradili a koje vam recenzenti nisu tražili. 
+
+
+\end{document}
+
