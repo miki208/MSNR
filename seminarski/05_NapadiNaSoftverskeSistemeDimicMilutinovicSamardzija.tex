@@ -65,46 +65,45 @@ Sigurnost softvera obuhvata razvoj i implementaciju softvera tako da se on zašt
 \subsection{Poverljivost, integritet, raspoloživost}
 \label{subsec:CIA model}
 
-Kao tri najvažnija aspekta sigurnosti softvera se smatraju poverljivost, integritet i raspoloživost podataka. Ovaj model se često naziva CIA model (eng.~{\em confidentiality, integrity and availability}).
+Kao tri najvažnija aspekta sigurnosti softvera se smatraju poverljivost, integritet i raspoloživost podataka. Ovaj model se često naziva CIA model (eng.~{\em confidentiality, integrity and availability}) \cite{cia}. 
 
-Poverljivost je bliska privatnosti. Mere koje se preduzimaju da bi se obezedila poverljivost su napravljene tako da se onemogući da se osetljive informacije nađu u pogrešnim rukama. Uobičajeno da se podaci klasifikuju u odnosu na to kolika šteta i kakav tip štete je moguć ako oni dođu u neovlašćen posed.
+Poverljivost je bliska privatnosti. Mere koje se preduzimaju da bi se obezedila poverljivost su napravljene tako da se onemogući da se osetljive informacije nađu u pogrešnim rukama. Uobičajeno da se podaci klasifikuju u odnosu na to kolika šteta i kakav tip štete je moguć ako oni dođu u neovlašćen posed \cite{cia}.
 
-Integritet uključuje održavanje konzistentnosti, preciznosti i pouzdanosti podataka tokom njihovog čitavog životnog ciklusa. Potrebno je obezbediti da se podaci ne mogu promeniti tokom slanja i da ih ne mogu promeniti ljudi koji za to nemaju ovlašćenje. Kontrola verzija može da služi kao preventiva od pogrešnih promena ili slučajnih brisanja od strane autorizovanih korisnika. Rezervne kopije ili duplikati moraju postojati da bi se podaci koji su oštećeni mogli vratiti u korektno stanje.
+Integritet uključuje održavanje konzistentnosti, preciznosti i pouzdanosti podataka tokom njihovog čitavog životnog ciklusa. Potrebno je obezbediti da se podaci ne mogu promeniti tokom slanja i da ih ne mogu promeniti ljudi koji za to nemaju ovlašćenje. Kontrola verzija može da služi kao preventiva od pogrešnih promena ili slučajnih brisanja od strane autorizovanih korisnika. Rezervne kopije ili duplikati moraju postojati da bi se podaci koji su oštećeni mogli vratiti u korektno stanje \cite{cia}.
 
-Raspoloživost se postiže održavanjem hardvera, preduzimanjem potrebnih popravki hardvera odmah kada za tim postoji potreba i održavanjem korektnog funkcionisanja operativnog sistema. Takođe je potrebno redovno vršiti ažuriranja sistema. Da bi se izbeglo da podaci postanu neraspoloživi potrebno je da postoje rezervne kopije podataka na geografski izolovanim lokacijama osiguranim čak i od prirodnih nepogoda kao što su požari, poplave i ostale prirodne nepogode. Dodatna oprema kao što je zaštitni zid (eng.~{\em firewall}) se može koristiti da bi se onemogućilo da podaci postanu neraspoloživi zbog zlonamernih napada kao što su onemogućavanje usluga (eng.~{\em denial-of-service}) i upadi u mrežu. 
+Raspoloživost se postiže održavanjem hardvera, preduzimanjem potrebnih popravki hardvera odmah kada za tim postoji potreba i održavanjem korektnog funkcionisanja operativnog sistema. Takođe je potrebno redovno vršiti ažuriranja sistema. Da bi se izbeglo da podaci postanu neraspoloživi potrebno je da postoje rezervne kopije podataka na geografski izolovanim lokacijama osiguranim čak i od prirodnih nepogoda kao što su požari, poplave i ostale prirodne nepogode. Dodatna oprema kao što je zaštitni zid (eng.~{\em firewall}) se može koristiti da bi se onemogućilo da podaci postanu neraspoloživi zbog zlonamernih napada kao što su onemogućavanje usluga (eng.~{\em denial-of-service}) i upadi u mrežu \cite{cia}. 
 
 
 \section{Mehanizmi zaštite softverskih sistema}
 \label{sec:mehanizmi zastite softverskih sistema}
 
-Osnovni mehanizmi zaštite na Internetu su: \textbf{zaštitni zid} (eng.~{\em firewall}), \textbf{antivirusni programi} koji sprečavaju da na računar dospe zlonamerni softver (eng.~{\em malware}) ili ga uklanjaju po dospeću na računar i \textbf{šifrovanje podataka}.
+Da ne bi došlo do narušavanja bezbednosti softvera on mora imati odgovarajuće mehanizme začtite. Neki od osnovnih mehanizama zaštite na Internetu su: \textbf{zaštitni zid} (eng.~{\em firewall}), \textbf{antivirusni programi} koji sprečavaju da na računar dospe zlonamerni softver (eng.~{\em malware}) ili ga uklanjaju po dospeću na računar, \textbf{šifrovanje podataka} i \textbf{virtuelna privatna mreža}.   
 
 \subsection{Zaštitni zid}
 \label{subsec:zastitni zid}
 
 Zaštitni zid je mrežni sistem zaštite koji se koristi za praćenje i kontrolisanje dolazećeg i odlazećeg mrežnog saobraćaja. Zaštitni zid uglavnom funkcioniše tako što uspostavlja barijeru između sigurne untrašnje mreže i druge, spoljašnje mreže, kao što je npr. Internet za koji se pretpostavlja da nije siguran.
 Zaštitni zid postoji u mrežnoj i desktop varijanti. Mrežni zaštitni zidovi omogućavaju zaštitu cele mreže i svih računara u njoj. Mogu biti softverski koji se izvršavaju na hardveru opšte namene ili hardverski zasnovani.
-Zaštitni zid zasnovan na desktop varijanti predstavja sloj softvera na jednom računaru koji kontroliše dolazeći i odlazeći mrežni saobraćaj isključivo na jednom računaru.
+Zaštitni zid zasnovan na desktop varijanti predstavja sloj softvera na jednom računaru koji kontroliše dolazeći i odlazeći mrežni saobraćaj isključivo na jednom računaru \cite{firewalls}.
 
 \subsection{Antivirusni softver}
 \label{subsec:antivirusni softver}
 
 Antivirusni softver je računarski softver koji se koristi da zaštiti, otkrije i ukloni zlonamerni softver sa računara.
-Antivirusni program se sastoji od nekoliko programa koji pokušavaju pronaći, sprečiti i ukloniti viruse i ostali zlonamerni softver. Obično koristi dve tehnike da bi postigao svoju funkcionalnost: skeniranje fajlova tražeći poznate viruse proverom definicija u rečniku virusa i identifikacija sumnjivog ponašanja računarskog programa, koje bi mogle biti posledica infekcije. Što se tiče prve tehnike, problem je u tome što se vrlo često pojavljuju novi virusi i čak i pored redovnog ažuriranja postoje novi virusi koje antivirus nema registrovane u svojoj bazi podataka.
+Antivirusni program se sastoji od nekoliko programa koji pokušavaju pronaći, sprečiti i ukloniti viruse i ostali zlonamerni softver. Obično koristi dve tehnike da bi postigao svoju funkcionalnost: skeniranje fajlova tražeći poznate viruse proverom definicija u rečniku virusa i identifikacija sumnjivog ponašanja računarskog programa, koje bi mogle biti posledica infekcije. Što se tiče prve tehnike, problem je u tome što se vrlo često pojavljuju novi virusi i čak i pored redovnog ažuriranja postoje novi virusi koje antivirus nema registrovane u svojoj bazi podataka \cite{antivirus}.
 
 \subsection{Šifrovanje podataka}
 \label{subsec:sifrovanje podataka}
 
-Zbog mogućnosti da neko zlonameran neovlašćeno prati komunikaciju koja se odvija preko Interneta i to kasnije zloupotrebi, u savremenom poslovanju mora postojati mehanizam koji obezbeđuje:  zaštitu tajnosti informacija (sprečavanje otkrivanja njihovog sadržaja),  integritet informacija (sprečavanje neovlašćene izmene informacija) i autentičnost informacija (definisanje i proveru identiteta pošiljaoca).
+Zbog mogućnosti da neko zlonameran neovlašćeno prati komunikaciju koja se odvija preko Interneta i to kasnije zloupotrebi, u savremenom poslovanju mora postojati mehanizam koji obezbeđuje:  zaštitu tajnosti informacija (sprečavanje otkrivanja njihovog sadržaja),  integritet informacija (sprečavanje neovlašćene izmene informacija) i autentičnost informacija (definisanje i proveru identiteta pošiljaoca). Kriptografija kao nauka koja se bavi metodama očuvanja tajnosti informacija pruža rešenje ovog problema. Poruke se šifrovanjem transformišu iz čitljivog u nečitljiv oblik za korisnika kome tekst nije namenjen. Samo korisnik kome je tekst namenjen može putem dešifrovanja videti njegov sadržaj.
 
-Kriptografija kao nauka koja se bavi metodama očuvanja tajnosti informacija pruža rešenje ovog problema. Poruke se šifrovanjem transformišu iz čitljivog u nečitljiv oblik za korisnika kome tekst nije namenjen. Samo korisnik kome je tekst namenjen može putem dešifrovanja videti njegov sadržaj.
-
-Asimetrično šifrovanje ili šifrovanje javnim ključem je šifarski sistem u kome svaki učesnik koristi dva ključa – javni i privatni. Javni se može slobodno distribuirati putem elektronske pošte ili Veb sajta, dok je drugi privatni, i dostupan je samo njegovom vlasniku. Moguće je bilo kome poslati šifrovanu poruku, ako je poznat javni ključ osobe kojoj se šalje, a samo primalac svojim privatnim ključem može da dešifruje poruku.
+Asimetrično šifrovanje ili šifrovanje javnim ključem je šifarski sistem u kome svaki učesnik koristi dva ključa – javni i privatni. Javni se može slobodno distribuirati putem elektronske pošte ili Veb sajta, dok je drugi privatni, i dostupan je samo njegovom vlasniku. Moguće je bilo kome poslati šifrovanu poruku, ako je poznat javni ključ osobe kojoj se šalje, a samo primalac svojim privatnim ključem može da dešifruje poruku \cite{cryptography}.
 
 \subsection{Virtuelna privatna mreža}
 \label{subsec:virtuelna privatna mreza}
 
-Virtuelna privatna mreža (eng.~{\em Virtual private network}) je virtualizovano proširenje privatne mreže putem javne mreže kao što je Internet. Ona omogućava korisnicima da šalju i primaju podatke preko deljene ili javne mreže stvarajući utisak kao da su njihovi uređaji direktno povezani preko privatne mreže. Aplikacije koje rade preko virtuelne privatne mreže zato mogu biti funkcionalnije i sigurnije nego privatna mreža. Virtuelna privatna mreža obezbeđuje poverljivost tako da čak i da je sadržaj na mreži ukraden na paketskom nivou, napadač će videti samo enkriptovane podatke. Takođe, postoji autentikacija pošiljaoca da bi se neovlašćenim korisnicima onemogućio pristup mreži.
+Virtuelna privatna mreža (eng.~{\em Virtual private network}) je virtualizovano proširenje privatne mreže putem javne mreže kao što je Internet. Ona omogućava korisnicima da šalju i primaju podatke preko deljene ili javne mreže stvarajući utisak kao da su njihovi uređaji direktno povezani preko privatne mreže. Aplikacije koje rade preko virtuelne privatne mreže zato mogu biti funkcionalnije i sigurnije nego privatna mreža. Virtuelna privatna mreža obezbeđuje poverljivost tako da čak i da je sadržaj na mreži ukraden na paketskom nivou, napadač će videti samo enkriptovane podatke. Takođe, postoji autentikacija pošiljaoca da bi se neovlašćenim korisnicima onemogućio pristup
+mreži \cite{firewalls}.
 
 \section{Napadi}
 \label{sec:napadi}
@@ -165,11 +164,11 @@ Navedeni primer je bio samo jedan od načina kako se ovaj bag može iskoristiti 
 
 \subsection{Podmetanje SQL upita}
 \label{subsec:sqlinjection}
-Podmetanje SQL upita omogućava izvršavanje zlonamernih SQL upita. Ovo je jedan od najstarijih, najčešćih i najopasnijih napada na Veb aplikacije. Praktično, ranjiva je svaka aplikacija koja koristi bazu podataka, i pritom ne vrši validaciju korisničkog unosa. Iskorišćavanjem ovog propusta, u određenim okolnostima, napadač može da zaobiđe mehanizme autentikacije i autorizacije, i da pročita sadržaj cele baze podataka. Takođe, može da dodaje, modifikuje i briše zapise, čime direktno utiče na integritet podataka, a potencijalno i na dostupnost aplikacije.
+Podmetanje SQL upita omogućava izvršavanje zlonamernih SQL upita. Ovo je jedan od najstarijih, najčešćih i najopasnijih napada na Veb aplikacije. Ranjiva je svaka aplikacija koja koristi bazu podataka, i pritom ne vrši validaciju korisničkog unosa. Iskorišćavanjem propusta, u određenim okolnostima, napadač može da zaobiđe mehanizme autentikacije i autorizacije, i da pročita sadržaj baze podataka. Takođe, može da dodaje, modifikuje i briše zapise, čime direktno utiče na integritet podataka, a potencijalno i na dostupnost aplikacije.
 
 Da bi izveo napad, napadač prvo mora da pronađe tačke u aplikaciji koje zahtevaju korisnički unos, a da pritom ti uneseni podaci učestvuju u nekom SQL upitu koji je ranjiv. Upiti su ranjivi ukoliko se korisnički unos direktno uključuje u upit, bez prethodne validacije i pretprocesiranja \cite{sqlinjection1}.
 
-Primer ~\ref{lst:sqlinjectionex1} prikazuje ranjivost u slučaju kada podaci nisu prethodno validirani. Ukoliko se za vrednost promenljive \emph{passwd} postavi \textbf{' OR 1=1}, nakon zamene se dobija upit prikazan na ~\ref{lst:sqlinjectionex2}. Izvršavanjem ovog upita, iz tabele \emph{users} će biti izlistani svi korisnici.\newpage
+Primer ~\ref{lst:sqlinjectionex1} prikazuje ranjivost u slučaju kada podaci nisu prethodno validirani. Ukoliko se za vrednost promenljive \emph{passwd} postavi \textbf{' OR 1=1}, nakon zamene se dobija upit prikazan na ~\ref{lst:sqlinjectionex2}. Izvršavanjem ovog upita, iz tabele \emph{users} će biti izlistani svi korisnici.
 \begin{lstlisting}[title={Primer ranjivog upita},label={lst:sqlinjectionex1}]
 uname = request.POST['username']
 passwd = request.POST['password']
@@ -192,7 +191,7 @@ Krađa sesije (eng.~{\em session hijacking}) jedan je od načina zloupotrebe kol
 
 Preduslov za ovaj napad je nestručnost i nepažnja korisnika, kao i da sesija nije istekla. Neki od načina kojima može da dođe u posed identifikatora sesije je instalacija zlonamernih dodataka za Veb pregledač koji imaju pristup svim kolačićima, uključujući i one skrivene, ili nadgledanjem mreže, ukoliko aplikacija koristi nebezbednu vezu.
 
-Sprečavanje ovakvih napada se vrši korišćenjem skrivenih kolačića (eng.~{\em HttpOnly cookies}), i na taj način se onemogućava pristup identifikatoru sesije iz JavaScript koda, što je jako bitno, posebno ako je aplikacija ranjiva na XSS napad. Ipak, ukoliko aplikacija ne koristi bezbednu vezu, HTTP poruke nisu kriptovane, pa su dostupne osobama koje korišćenjem mrežnih skenera (eng.~{\em network sniffer}) mogu da vide sve pakete. Pored svih ostalih podataka, u HTTP poruci se nalazi i identifikator sesije. Kod nebezbednih veza, korisnici su najizloženiji korišćenjem javnih mreža. Ono što korisnici mogu da urade povodom izbegavanja ovog napada je da budu pažljivi i da ne dozvole osobama u koje nemaju poverenja da koriste njihov računar (neko bi mogao da instalira softver za špijunažu ili virus), i da instaliraju dodatke za pregledače isključivo iz proverenih izvora (dodaci imaju pristup svim kolačićima, uključujući i one skrivene). Ukoliko bilo šta od navedenog izostane, korisnik je izložen ovakvoj vrsti napada.
+Sprečavanje ovakvih napada se vrši korišćenjem skrivenih kolačića, instalacijom dodataka isključivo iz proverenih izvora i korišćenjem bezbedne veze. Ukoliko bilo šta od navedenog izostane, korisnik je izložen ovom napadu.
 
 \subsection{CSRF}
 \label{subsec:csrf}
@@ -238,7 +237,7 @@ Neke od njih su:
 \item \textbf{Treba razumeti kako eksterne komponente utiču na mogućnost napada na sistem.}
     Kad se dodaju funkcionalnosti postojećem sistemu, razvijaoci često koriste postojeće komponente da bi dodali neke ili sve nove funkcionalnosti. Treba biti siguran da je softver koji se dodaje testiran i da zadovoljava sigurnosne standarde u postojećem softveru. Trebalo bi obratiti pažnju na to da uključivanjem eksternih komponenti uključujemo i sve njihove sigurnosne nedostatke i ograničenja.
 \item \textbf{Treba biti fleksibilan kad se uzimaju u obzir buduće promene na subjektima i objektima.}
-    Sigurnost softvera mora biti dizajnirana tako da može da se menja, a ne da bude krhka i statična. Tokom dizajniranja i procesa razvoja cilj je da se postigne skup funkcionalnih i sigurnosnih zahteva. S druge strane, softver, okruženje u kome se pokreće softver i opasnosti po softver se menjaju tokom vremena. Čak i kada se o sigurnosti vodi računa i tokom dizajna, dizajneri i dalje treba da uzmu u obzir sigurnosne implikacije budućih promena u sistemu.
+    Sigurnost softvera mora biti dizajnirana tako da može da se menja, a ne da bude krhka i statična. Softver, okruženje u kome se pokreće softver i opasnosti se menjaju tokom vremena i prilikom dizajniranja softvera potrebno je voditi računa i mogućim promenama u budućnosti.
 \end{itemize}
 
 \section{Bezbednost i Veb serveri}
@@ -247,46 +246,28 @@ Neke od njih su:
 Veb server (eng.~{\em Web Server}) je računar koji je odgovoran za preuzimanje i opsluživanje Veb stranica koje zahteva klijent. Veb server obrađuje klijentske zahteve preko HTTP mrežnog protokola čiji je zadatak da distribuira informacije na Internetu. On je povezan na Internet što znači da korisnici mogu da pristupe podacima sa servera sa bilo kog mesta na Internetu. Ovakva vrsta javnog pristupa može imati za posledicu pokušaje neovlašćenog pristupa podacima od strane hakera, radi onesposobljavanja nekih servisa ili krađe vrednih podataka. Postoji veliki broj tipova Veb servera od kojih su najpoznatiji Apache Web Server, Internet Information Server (IIS) , lighttpd , Sun Java System Web Server i Jigsaw Server. \\
 \indent Veb serveri su najčešće mete napada na mreži. Zbog toga je važno da se zaštite na odgovarajući način, kako bi eventualna zloupotreba imala što manje posledica. Zaštita servera je zahtevtevan i tehnički izazovan posao koji obuhvata uočavanje potencijalnih mesta i načina napada, kao  i implementaciju mehanizama zaštite istih.  
 
-\subsection{Bezbednosne pretnje }
-\label{sec:pretnje}
-Najčešće bezbednosne pretnje po Veb server su:
-\begin{itemize}
-    \item Neovlašćeni pristup
-    \item Nepravilna upotreba
-    \item Onemogućavanje usluga (eng.~{\em Denial of service} - DoS attacks)
-    \item Fizičke pretnje
-\end{itemize}
-
 \subsection{Bezbednosni propusti i načini otklanjanja}
 \label{sec:propusti}
-Kao što je pomenuto, serveri su najizazovnije mete napada od strane hakera, koji iskorišćavaju različite bezbednosne mane infrastrukture servera radi kompromitovanja sistema. Zaštita servera obuhvata odbranu "u dubinu", građenjem sloj po sloj različitih zaštitnih mehanizama u okviru arhitekture mreže, operativnog sistema i aplikativnog sloja  \cite{wssg}. Zaštita u dubinu pruža dobru prevenciju i zaštitu od napada na server.
+Kao što je pomenuto, serveri su najizazovnije mete napada od strane hakera, koji iskorišćavaju različite bezbednosne mane infrastrukture servera radi kompromitovanja sistema. U najčešće bezbednosne pretnje po Veb server se ubrajaju: \textbf{neovlašćeni pristup}, \textbf{nepravilna upotreba}, \textbf{onemogućavanje usluga (eng.~{\em Denial of service}} i \textbf{fizičke pretnje}. Zaštita servera obuhvata odbranu "u dubinu", građenjem sloj po sloj različitih zaštitnih mehanizama u okviru arhitekture mreže, operativnog sistema i aplikativnog sloja  \cite{wssg}. Zaštita u dubinu pruža dobru prevenciju i zaštitu od napada na server.
 
 \indent U prethodnom poglavlju su opisane uobičajene greške u dizajnu softvera i većina njih se odnosi i na Veb servere. Osim njih, neki specifični propusti za Veb servere su:  
 \begin{itemize}
     \item \textbf{Bagovi u CGI skriptama }\\
-    \textbf({eng.~{\em  Common Gateway Interface (CGI)}}) skripte su programi koji se na Veb serverima izvršavaju u realnom vremenu i čija je uloga da rukuju ulaznim podacima korisnika, pristupaju bazi i vraćaju informacije korisniku \cite{lawsa}. U suštini, to su mini Veb serveri čija je uloga važna, te greške u ovim skriptama mogu dovesti do kompromitovanja servera na dva načina:
-    \begin{itemize}
-    \item
-        Otkrivanjem važnih host informacija koje mogu da pomognu napadačima da pristupe serveru 
-    
-    \item
-       Korisnicki ulazni podaci mogu biti komande koje se automatski izvršavaju i kao takve da nanesu štetu host mašini i ugroze sigurnost servera 
-        
-    \end{itemize}
+    \textbf({eng.~{\em  Common Gateway Interface (CGI)}}) skripte su programi koji se na Veb serverima izvršavaju u realnom vremenu i čija je uloga da rukuju ulaznim podacima korisnika, pristupaju bazi i vraćaju informacije korisniku \cite{lawsa}. U suštini, to su mini Veb serveri čija je uloga važna, te greške u ovim skriptama mogu dovesti do kompromitovanja servera na dva načina. Prvi je otkrivanjem važnih host informacija koje mogu da pomognu napadačima da pristupe serveru, dok je drugi način kada korisnikki ulazni podaci mogu biti komande koje se automatski izvršavaju i kao takve da nanesu štetu host mašini i ugroze sigurnost servera.
     
     
      \item \textbf{ Kontrola pristupa }  
      
-  \textbf{ Kontrolom pristupa} regulište se ko ima mogućnost pretraživanja i izvršavanja (CGI skripti) na serveru. Pravilno podešena autentikacija, autorizacija i kontrola pristupa su obavezni kako bi se smanjio broj bezbednosnih povreda. Kontrolom čitanja nekih fajlova se štiti poverljivost informacija a kontrolom
+  \textbf{Kontrolom pristupa} regulište se ko ima mogućnost pretraživanja i izvršavanja (CGI skripti) na serveru. Pravilno podešena autentikacija, autorizacija i kontrola pristupa su obavezni kako bi se smanjio broj bezbednosnih povreda. Kontrolom čitanja nekih fajlova se štiti poverljivost informacija a kontrolom
      pristupa se štiti njihov integritet. Obratiti pažnju na dobru zaštitu konfiguracijskih fajlova, čijim bi se pristupom mogla ugroziti sigurnost celog servera. \\
      \indent Pravilno konfigurisana kontrola pristupa smanjuje mogucnost otkrivanja osetljivih informacija koje ne smeju biti javno izložene. Takođe, dobra kontrola pristupa će ograničiti korišćenje resursa u slučaju DoS napada \cite{gspws}. 
-     Primarni uređaji za kontrolu pristupa su ruter i zaštitni zid (dodatno pojasniti zaštitu koju pruža firewall).
+     Primarni uređaji za kontrolu pristupa su ruter i zaštitni zid.
      Na slici ~\ref{fig:server} prikazan je jedan ispravan način konfiguracije Veb servera.
     \begin{figure}[h!]
     \begin{center}
     \includegraphics[scale=0.6]{slike/server.png}
     \end{center}
-    \caption{Konfiguracija Veb Servera}
+    \caption{Konfiguracija Veb Servera \cite{scpws}}
     \label{fig:server}
     \end{figure}
     \item \textbf {Loša bezbednosna konfiguracija } \\
@@ -322,7 +303,7 @@ Kao što je pomenuto, serveri su najizazovnije mete napada od strane hakera, koj
 
 \section{Zaključak}
 \label{sec:zakljucak}
-I pored svih mehanizama zaštite koji postoje, softver nikada ne može biti u potpunosti bezbedan. Može se primetiti da validacija i obrada korisničkog unosa igraju veliku ulogu u sprečavanju velikog broja napada. Potrudili smo se da ukratko prikažemo koji su najčešći napadi na softverske sisteme, na koji način on može biti ugrožen i kako se možemo zaštititi. S obzirom na to da je bezbednost softvera veoma kompleksna i široka oblast, u ovom kratkom radu nisu mogli biti obuhvaćeni svi aspekti bezbednosti softvera i mi smo se ograničili na neke najvažnije. Ovaj rad može predstavljati dobar uvod u detaljnije izučavanje pojedinih aspakata bezbednosti softvera koji su prikazani.
+Potrudili smo se da ukratko prikažemo koji su najčešći napadi na softverske sisteme, na koji način on može biti ugrožen i kako se možemo zaštititi. Može se primetiti da validacija i obrada korisničkog unosa igraju veliku ulogu u sprečavanju velikog broja napada. Međutim, pored svih mehanizama zaštite koji postoje, softver nikada ne može biti u potpunosti bezbedan i potrebno je konstantno pratiti kakve se nove opasnosti po softver pojavljuju i zaštititi se na odgovarajući način. S obzirom na to da je bezbednost softvera veoma kompleksna i široka oblast, u ovom kratkom radu nisu mogli biti obuhvaćeni svi aspekti bezbednosti softvera i mi smo se ograničili na neke najvažnije, ali ovaj rad može predstavljati dobar uvod u detaljnije izučavanje pojedinih aspekata bezbednosti softvera koji su prikazani.
 
 \addcontentsline{toc}{section}{Literatura}
 \appendix
